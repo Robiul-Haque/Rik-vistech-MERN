@@ -1,0 +1,176 @@
+.profile-pic {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  background: rgb(250, 209, 203);
+  background: linear-gradient(360deg, rgba(250, 209, 203, 1) 0%, rgba(220, 242, 229, 1) 100%);
+}
+
+.profile-pic .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(249, 249, 249, 0.715);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.overlay {
+  z-index: 20;
+}
+
+.profile-pic .overlay img {
+  max-width: 30px;
+}
+
+.profile-pic:hover .overlay {
+  opacity: 1;
+}
+
+.gradint-bg {
+  /* background: rgb(255, 241, 247);
+  background: radial-gradient(circle,
+      rgba(255, 241, 247, 1) 0%,
+      rgba(223, 235, 249, 1) 100%); */
+  background: white;
+}
+
+.gradint-bg-2 {
+  /* background: rgb(250, 209, 203);
+  background: linear-gradient(360deg, rgba(250, 209, 203, 1) 0%, rgba(220, 242, 229, 1) 100%); */
+  background: white;
+}
+
+.gradint-bg-light {
+  /* background: rgb(254, 254, 254);
+  background: radial-gradient(circle,
+      rgba(254, 254, 254, 1) 0%,
+      rgba(251, 251, 251, 1) 100%); */
+  background: white;
+}
+
+
+::-webkit-scrollbar {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(circle, rgb(123, 143, 240) 0%, rgb(241, 102, 130) 100%);
+}
+
+/* Change scrollbar thumb (the draggable scrolling handle) */
+::-webkit-scrollbar-thumb {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(circle, rgb(123, 143, 240) 0%, rgb(241, 102, 130) 100%);
+}
+
+/* Optional: Change scrollbar track (the area behind the thumb) */
+::-webkit-scrollbar-track {
+  background-color: #ccc;
+  /* Change this to the desired track color */
+}
+
+/* Optional: Change scrollbar corner */
+::-webkit-scrollbar-corner {
+  background-color: #eee;
+  /* Change this to the desired corner color */
+}
+
+/* Optional: Change scrollbar border */
+::-webkit-scrollbar {
+  border: 1px solid #ccc;
+  /* Change this to the desired border style */
+}
+
+/* Optional: Change scrollbar width and height */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+  /* Change this to the desired width */
+}
+
+/* Optional: Hide scrollbar when not in use */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Optional: Show scrollbar always */
+::-webkit-scrollbar {
+  display: block;
+}
+
+/* CSS */
+.btn-primary {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-primary:before {
+  content: "";
+  background: linear-gradient(45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-btn-primary 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-btn-primary {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btn-primary:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
